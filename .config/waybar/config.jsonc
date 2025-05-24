@@ -1,0 +1,52 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["battery", "clock"],
+  "hyprland/window": {
+    "max-length": 50
+  },
+  "hyprland/workspaces": {
+    "format": "{icon} {windows}",
+    "format-window-separator": "\n",
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "class<Microsoft-edge>": "",
+      "class<zen-browser>": "",
+      "class<code-oss>": "󰅨",
+      "class<Cursor>": "󰅨",
+      "class<Clash.*>": "󰲀",
+      "class<kitty>": "",
+      "class<com.alibabainc.dingtalk>": "",
+      "class<org.wezfurlong.wezterm>": "",
+      "class<firefox*>": "",
+      "class<dev.zed.Zed>": "󰅨",
+      "class<dev.warp.Warp>": "",
+      "class<strawberry>": "",
+      "class<com.github.johnfactotum.Foliate>": "",
+      "class<libreoffice-writer>": "󰈭",
+      "class<libreoffice-calc>": "󰈜",
+      "class<libreoffice-impress>": "󰈨",
+      "class<libreoffice-startcenter>": "󰈭",
+      "class<jetbrains-studio>": "󰀲",
+      "title<.*Writer.*>": "󰈭",
+      "title<.*Spreadsheets.*>": "󰈜",
+      "title<.*Presentation.*>": "󰈨",
+      "title<MATLAB.*>": "",
+      "title<Wolfram.*>": ""
+    },
+    "hyprland/submap": {
+      "format": "✌️ {}",
+      "max-length": 8,
+      "tooltip": false
+    },
+  },
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "clock": {
+    "format-alt": "{:%a, %d. %b  %H:%M}"
+  }
+}
