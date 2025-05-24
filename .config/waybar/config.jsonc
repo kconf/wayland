@@ -3,7 +3,7 @@
   "position": "bottom",
   "modules-left": ["hyprland/workspaces", "hyprland/submap"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["battery", "clock"],
+  "modules-right": ["network", "pulseaudio", "clock", "tray"],
   "hyprland/window": {
     "max-length": 50
   },
@@ -12,6 +12,7 @@
     "format-window-separator": "\n",
     "window-rewrite-default": "",
     "window-rewrite": {
+      "class<Thunar>": "",
       "class<Microsoft-edge>": "",
       "class<zen-browser>": "",
       "class<code-oss>": "󰅨",
@@ -40,13 +41,35 @@
       "format": "✌️ {}",
       "max-length": 8,
       "tooltip": false
-    },
+    }
   },
-  "battery": {
-    "format": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""]
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "  {essid} ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": [" ", " "]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
   },
   "clock": {
-    "format-alt": "{:%a, %d. %b  %H:%M}"
+    "format": "   {:%H:%M}",
+    "format-alt": "   {:%a, %d. %b  %H:%M}"
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 20
   }
 }
