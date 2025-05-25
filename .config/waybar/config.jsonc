@@ -33,6 +33,7 @@
       "title<.*Presentation.*>": "󰈨",
       "class<com.alibabainc.dingtalk>": "",
       "class<strawberry>": "",
+      "class<CherryStudio>": "",
       "class<Mathematica>": "󰿉",
       "MATLAB R": "󰿉"
     },
