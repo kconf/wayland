@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "bottom",
-  "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
   "modules-right": ["network", "pulseaudio", "clock", "tray"],
   "hyprland/window": {
@@ -17,10 +17,9 @@
       "class<zen-browser>": "",
       "class<code-oss>": "󰅨",
       "class<Cursor>": "󰅨",
-      "class<Clash.*>": "󰲀",
       "class<kitty>": "",
-      "class<com.alibabainc.dingtalk>": "",
       "class<org.wezfurlong.wezterm>": "",
+      "class<com.alibabainc.dingtalk>": "",
       "class<firefox*>": "",
       "class<dev.zed.Zed>": "󰅨",
       "class<dev.warp.Warp>": "",
@@ -37,15 +36,10 @@
       "title<MATLAB.*>": "",
       "title<Wolfram.*>": ""
     },
-    "hyprland/submap": {
-      "format": "✌️ {}",
-      "max-length": 8,
-      "tooltip": false
-    }
   },
   "network": {
     "format": "{ifname}",
-    "format-wifi": "  {essid} ",
+    "format-wifi": " {essid} ",
     "format-ethernet": "{ipaddr}/{cidr} 󰊗",
     "format-disconnected": "", //An empty format will hide the module.
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
@@ -55,8 +49,8 @@
     "max-length": 50
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "",
+    "format": "{icon}{volume}%",
+    "format-muted": " 0%",
     "format-icons": {
       "default": [" ", " "]
     },
@@ -65,8 +59,8 @@
     "ignored-sinks": ["Easy Effects Sink"]
   },
   "clock": {
-    "format": "   {:%H:%M}",
-    "format-alt": "   {:%a, %d. %b  %H:%M}"
+    "format": "  {:%H:%M}",
+    "format-alt": "  {:%a, %d. %b  %H:%M}"
   },
   "tray": {
     "icon-size": 20,
