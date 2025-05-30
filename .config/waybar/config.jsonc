@@ -5,7 +5,7 @@
   "modules-center": ["hyprland/window"],
   "modules-right": ["network", "pulseaudio", "clock", "tray"],
   "hyprland/window": {
-    "max-length": 50
+    "max-length": 50,
   },
   "hyprland/workspaces": {
     "format": "{icon} {windows}",
@@ -22,6 +22,7 @@
       "class<code>": "",
       "class<Cursor>": "󰅨",
       "class<dev.zed.Zed>": "󰅨",
+      "class<obsidian>": "",
       "class<jetbrains-studio>": "󰀲",
       "class<com.github.johnfactotum.Foliate>": "",
       "class<libreoffice-writer>": "󰈭",
@@ -35,7 +36,7 @@
       "class<strawberry>": "",
       "class<CherryStudio>": "",
       "class<Mathematica>": "󰿉",
-      "MATLAB R": "󰿉"
+      "MATLAB R": "󰿉",
     },
   },
   "network": {
@@ -47,17 +48,17 @@
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50
+    "max-length": 50,
   },
   "pulseaudio": {
     "format": "{icon}{volume}%",
     "format-muted": " 0%",
     "format-icons": {
-      "default": [" ", " "]
+      "default": [" ", " "],
     },
     "scroll-step": 1,
     "on-click": "pavucontrol",
-    "ignored-sinks": ["Easy Effects Sink"]
+    "ignored-sinks": ["Easy Effects Sink"],
   },
   "clock": {
     "format": "  {:%H:%M}",
@@ -72,12 +73,12 @@
         "days": "<span color='#ecc6d9'><b>{}</b></span>",
         "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-      }
-    }
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+      },
+    },
   },
   "tray": {
     "icon-size": 20,
-    "spacing": 20
-  }
+    "spacing": 20,
+  },
 }
