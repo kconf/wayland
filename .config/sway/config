@@ -53,9 +53,9 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec dmenu_run
 # A more modern dmenu replacement is rofi (works with Wayland):
 # bindsym $mod+d exec "rofi -modi drun,run -show drun"
-bindsym $mod+d exec "rofi -show"
-bindsym $mod+Tab exec "rofi -show window"
-bindsym $mod+c exec "rofi -show calc -modi calc -no-show-match -no-sort > /dev/null"
+bindsym $mod+d exec "rofi -dpi -1 -show"
+bindsym $mod+Tab exec "rofi -dpi -1 -show window"
+bindsym $mod+c exec "rofi -dpi -1 -show calc -modi calc -no-show-match -no-sort > /dev/null"
 # There also is dmenu-wl (Wayland native) or wofi as alternatives:
 # bindsym $mod+d exec wofi --show drun
 
