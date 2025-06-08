@@ -1,0 +1,44 @@
+{
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": " {essid} ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+  },
+  "pulseaudio": {
+    "format": "{icon}{volume}%",
+    "format-muted": " 0%",
+    "format-icons": {
+      "default": [" ", " "],
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"],
+  },
+  "clock": {
+    "format": "  {:%H:%M}",
+    "format-alt": "  {:%Y-%m-%d %a %H:%M}",
+    "tooltip-format": "<big>{:%B %Y}</big><tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+      },
+    },
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 20,
+  },
+}
