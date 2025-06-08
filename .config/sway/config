@@ -206,7 +206,8 @@ for_window [class=".*"] border pixel 1
 #: }}}
 
 #: Startup applications {{{
-exec fcitx5
+exec fcitx5 --replace -d
+exec xrdb -merge ~/.Xresources
 exec waybar -c ~/.config/waybar/sway.jsonc
 #: }}}
 

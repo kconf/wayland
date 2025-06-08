@@ -2,6 +2,9 @@
   "layer": "top",
   "position": "bottom",
   "include": ["~/.config/waybar/base.jsonc"],
+  "modules-left": ["niri/workspaces"],
+  "modules-center": ["niri/window"],
   "modules-right": ["network", "pulseaudio", "clock", "tray"],
-  "wlr/workspaces": {},
+  "niri/window": {},
+  "niri/workspaces": {},
 }
