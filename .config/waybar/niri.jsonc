@@ -1,0 +1,10 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "include": ["~/.config/waybar/modules.jsonc"],
+  "modules-left": ["niri/workspaces"],
+  "modules-center": ["niri/window"],
+  "modules-right": ["network", "pulseaudio", "clock", "tray"],
+  "niri/window": {},
+  "niri/workspaces": {},
+}

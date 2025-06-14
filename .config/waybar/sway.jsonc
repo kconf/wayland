@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "bottom",
-  "include": ["~/.config/waybar/base.jsonc"],
+  "include": ["~/.config/waybar/modules.jsonc"],
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
   "modules-right": ["network", "pulseaudio", "clock", "tray"],
@@ -15,7 +15,8 @@
   "sway/workspaces": {
     "format": "{value} {windows}",
     "format-window-separator": " | ",
-    "window-rewrite-default": "{name}",
+    "window-format": "<span color='#e0e0e0'>{name}</span>",
+    "window-rewrite-default": " {name}",
     "window-rewrite": {
       "class<Thunar>": "",
       "class<Microsoft-edge>": "",

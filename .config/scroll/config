@@ -30,7 +30,7 @@ set $menu rofi
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: scrollmsg -t get_outputs
-output DP-1 scale 2.0
+output * scale 2.0
 
 ### Idle configuration
 #
@@ -460,6 +460,8 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
         scroller #2F343AFF #055E20FF #FFFFFFFF
     }
+
+    font pango:monospace 12
 }
 #
 # include /etc/scroll/config.d/*
