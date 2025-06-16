@@ -31,6 +31,7 @@ set $menu rofi
 #
 # You can get the names of your outputs by running: scrollmsg -t get_outputs
 output * scale 2.0
+output * bg ~/Pictures/wallpaper.png fill
 
 ### Idle configuration
 #
@@ -68,9 +69,40 @@ exec fcitx5 --replace -d
 default_border pixel 2
 gaps inner 4
 gaps outer 20
-client.focused #15439e #000000 #e0e0e0 #2e9ef4 #15439e
-client.focused_inactive #595959 #000000 #e0e0e0 #2e9ef4 #595959
-client.unfocused #595959 #000000 #e0e0e0 #2e9ef4 #595959
+
+#
+# Color definition
+#
+
+set $c1 #fd472f
+set $c2 #d79921
+set $c3 #99a2ea
+set $c4 #333142
+set $c5 #342f73
+
+
+set $white #f4f4f8
+set $dark #333333
+set $dim #666666
+
+
+set $focused_bgcolor $c3
+set $focused_textcolor $dark
+set $focused_indicator $c2
+
+set $inactive_bgcolor $c5
+set $inactive_textcolor $white
+set $inactive_indicator $c3
+
+set $unfocused_bgcolor $c4
+set $unfocused_textcolor $dim
+set $unfocused_indicator $c5
+
+
+client.focused $focused_bgcolor $focused_bgcolor $focused_textcolor $focused_indicator $focused_bgcolor
+client.focused_inactive $inactive_bgcolor $inactive_bgcolor $inactive_textcolor $inactive_indicator $inactive_bgcolor
+client.unfocused $unfocused_bgcolor $unfocused_bgcolor $unfocused_textcolor $unfocused_indicator $unfocused_bgcolor
+
 
 # Idle inhibit for fullscreen windows
 for_window [all] inhibit_idle fullscreen
@@ -447,21 +479,22 @@ bindgesture swipe:4:up scale_workspace overview
 # Status Bar:
 #
 # Read `man 5 scroll-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, scrollbar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-        scroller #2F343AFF #055E20FF #FFFFFFFF
-    }
-
-    font pango:monospace 12
-}
+bar scrollbar_command waybar
+# bar {
+#     position top
+#
+#     # When the status_command prints a new line to stdout, scrollbar updates.
+#     # The default just shows the current date and time.
+#     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+#
+#     colors {
+#         statusline #ffffff
+#         background #323232
+#         inactive_workspace #32323200 #32323200 #5c5c5c
+#         scroller #2F343AFF #055E20FF #FFFFFFFF
+#     }
+#
+#     font pango:monospace 12
+# }
 #
 # include /etc/scroll/config.d/*
