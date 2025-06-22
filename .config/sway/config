@@ -40,8 +40,7 @@ floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-# TODO: fixit
-# tiling_drag modifier titlebar
+tiling_drag enable
 
 # start a terminal
 bindsym $mod+Return exec wezterm
