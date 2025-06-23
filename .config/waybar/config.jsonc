@@ -9,7 +9,7 @@
     "max-length": 50,
   },
   "sway/mode": {
-    "format": " {}",
+    "format": " {}",
     "max-length": 50,
   },
   "sway/workspaces": {

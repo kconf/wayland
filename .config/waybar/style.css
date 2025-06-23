@@ -36,6 +36,7 @@ window#waybar {
   color: #f38ba8;
 }
 
+#mode,
 #clock,
 #pulseaudio,
 #cpu,
@@ -52,6 +53,10 @@ window#waybar {
 
 window#waybar.empty #window {
   background-color: transparent;
+}
+
+#mode {
+  color: #fe8019;
 }
 
 #cpu {
