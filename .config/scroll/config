@@ -22,7 +22,7 @@ set $home Home
 set $end End
 
 # Your preferred terminal emulator
-set $term kitty
+set $term foot
 
 # Your perferred file manager
 set $filemanager thunar

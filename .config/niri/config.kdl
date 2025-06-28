@@ -257,7 +257,7 @@ layout {
 spawn-at-startup "mako"
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
+spawn-at-startup "waybar" "-c" "/home/hjw/.config/waybar/niri.jsonc"
 
 spawn-at-startup "fcitx5" "--replace" "-d"
 
@@ -352,7 +352,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: wezterm" { spawn "wezterm"; }
-    Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn "wofi"; }
+    Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-dpi" "-1" "-show"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
