@@ -8,18 +8,12 @@
 set $mod Mod4
 
 # Home row direction keys, like vim
-# set $left h
-# set $down j
-# set $up k
-# set $right l
-# set $home g
-# set $end semicolon
-set $left Left
-set $down Down
-set $up Up
-set $right Right
-set $home Home
-set $end End
+set $left h
+set $down j
+set $up k
+set $right l
+set $home u
+set $end i
 
 # Your preferred terminal emulator
 set $term foot
@@ -67,9 +61,20 @@ bindsym $mod+Shift+$down focus output down
 bindsym $mod+Shift+$up focus output up
 bindsym $mod+Shift+$right focus output right
 
-# TODO: add cursor key
+# Move your focus around
+bindsym $mod+left focus left
+bindsym $mod+down focus down
+bindsym $mod+up focus up
+bindsym $mod+right focus right
+bindsym $mod+home focus beginning
+bindsym $mod+end focus end
 
-# TODO: focus the parent container
+# Focus other monitors
+bindsym $mod+Shift+left focus output left
+bindsym $mod+Shift+down focus output down
+bindsym $mod+Shift+up focus output up
+bindsym $mod+Shift+right focus output right
+
 
 #: }}}
 
@@ -89,6 +94,21 @@ bindsym $mod+Alt+$up move up nomode
 bindsym $mod+Alt+$right move right nomode
 bindsym $mod+Alt+$home move beginning nomode
 bindsym $mod+Alt+$end move end nomode
+
+# Move the focused window with the same, but add Ctrl
+bindsym $mod+Ctrl+left move left
+bindsym $mod+Ctrl+down move down
+bindsym $mod+Ctrl+up move up
+bindsym $mod+Ctrl+right move right
+bindsym $mod+Ctrl+home move beginning
+bindsym $mod+Ctrl+end move end
+# nomode
+bindsym $mod+Alt+left move left nomode
+bindsym $mod+Alt+down move down nomode
+bindsym $mod+Alt+up move up nomode
+bindsym $mod+Alt+right move right nomode
+bindsym $mod+Alt+home move beginning nomode
+bindsym $mod+Alt+end move end nomode
 
 # Move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
@@ -112,9 +132,9 @@ mode "modifiers" {
     bindsym $end set_mode end; mode default 
     bindsym $up set_mode focus; mode default 
     bindsym $down set_mode nofocus; mode default 
-    bindsym h set_mode center_horiz; mode default 
+    bindsym Ctrl+h set_mode center_horiz; mode default 
     bindsym Shift+h set_mode nocenter_horiz; mode default 
-    bindsym v set_mode center_vert; mode default 
+    bindsym Ctrl+v set_mode center_vert; mode default 
     bindsym Shift+v set_mode nocenter_vert; mode default 
     bindsym r set_mode reorder_auto; mode default 
     bindsym Shift+r set_mode noreorder_auto; mode default 
