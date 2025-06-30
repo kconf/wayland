@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 PACKAGES=(
-  "xdg-desktop-portal-gnome"
-  "niri"
-  "xwayland-satellite"
+  "river"
+  "wlr-randr"
 )
 
 if [[ $# -eq 0 || $1 = "install" ]]; then
