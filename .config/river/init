@@ -13,7 +13,7 @@ wlr-randr --output DP-1 --scale 2.0
 
 riverctl spawn "dunst"
 riverctl spawn "waybar -c ~/.config/waybar/river.jsonc"
-riverctl spawn "swaybg -i ~/Pictures/Wallpapers/OHR.BalloonsTurkey_ZH-CN2791109350_UHD.jpg -m fill"
+riverctl spawn "swaybg -i ~/Pictures/Wallpapers/river.png -m fill"
 
 # Fcitx5
 export XMODIFIERS=@im=fcitx

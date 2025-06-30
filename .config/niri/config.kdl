@@ -269,7 +269,7 @@ spawn-at-startup "waybar" "-c" "/home/hjw/.config/waybar/niri.jsonc"
 
 spawn-at-startup "fcitx5" "--replace" "-d"
 
-spawn-at-startup "swaybg" "-i" "/home/hjw/Pictures/gruvbox-wallpapers-main/wallpapers/irl/road-3.jpg" "-m" "fill"
+spawn-at-startup "swaybg" "-i" "/home/hjw/Pictures/Wallpapers/niri.png" "-m" "fill"
 
 // Support xwayland
 spawn-at-startup "xwayland-satellite"

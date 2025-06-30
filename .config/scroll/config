@@ -401,7 +401,7 @@ bindsym $mod+Ctrl+period scale_content reset
 
 # You can get the names of your outputs by running: scrollmsg -t get_outputs
 output * scale 2.0
-output * bg ~/Pictures/wallpaper.png fill
+output * bg ~/Pictures/Wallpapers/scroll.png fill
 
 # Animations
 animations {
