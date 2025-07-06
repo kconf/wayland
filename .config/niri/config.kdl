@@ -277,6 +277,10 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "sh" "-c" "sleep 1 && xrdb -merge ~/.Xresources"
 environment {
     DISPLAY ":0"
+    XMODIFIERS "@im=fcitx"
+    INPUT_METHOD "fcitx"
+    SDL_IM_MODULE "fcitx"
+    QT_IM_MODULE "fcitx"
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -583,9 +587,9 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Mod+P { screenshot; }
+    Ctrl+P { screenshot-screen; }
+    Alt+P { screenshot-window; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
