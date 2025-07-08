@@ -26,16 +26,23 @@ set $menu rofi -dpi -1 -show
 
 #: }}}
 
+#: XWayland {{{
+# xwayland disable
+# exec xwayland-satellite
+# exec sh -c 'sleep 1 && env DISPLAY=:0 xrdb -merge ~/.Xresources'
+#: }}}
+
 #: Basic operations {{{
 
 # Start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+Return exec "env DISPLAY=:0 $term"
 
 # Start a file manager
-bindsym $mod+e exec $filemanager
+bindsym $mod+e exec "env DISPLAY=:0 $filemanager"
 
 # Start your launcher
-bindsym $mod+d exec $menu
+# bindsym $mod+d exec $menu
+bindsym $mod+d exec "env DISPLAY=:0 rofi -dpi -1 -show"
 
 # Kill focused window
 bindsym $mod+Shift+q kill

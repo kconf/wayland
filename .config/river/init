@@ -15,12 +15,6 @@ riverctl spawn "dunst"
 riverctl spawn "waybar -c ~/.config/waybar/river.jsonc"
 riverctl spawn "swaybg -i ~/Pictures/Wallpapers/river.png -m fill"
 
-# Fcitx5
-export XMODIFIERS=@im=fcitx
-export INPUT_METHOD=fcitx
-export SDL_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-
 riverctl spawn "fcitx5 --replace -d"
 
 # Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
