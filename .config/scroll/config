@@ -27,9 +27,9 @@ set $menu rofi -dpi -1 -show
 #: }}}
 
 #: XWayland {{{
-# xwayland disable
-# exec xwayland-satellite
-# exec sh -c 'sleep 1 && env DISPLAY=:0 xrdb -merge ~/.Xresources'
+xwayland disable
+exec xwayland-satellite
+exec sh -c 'sleep 1 && env DISPLAY=:0 xrdb -merge ~/.Xresources'
 #: }}}
 
 #: Basic operations {{{
