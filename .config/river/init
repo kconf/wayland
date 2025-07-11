@@ -23,7 +23,7 @@ riverctl spawn "fcitx5 --replace -d"
 riverctl map normal Super D spawn "rofi -dpi -1 -show"
 
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
-riverctl map normal Super Return spawn foot
+riverctl map normal Super Return spawn wezterm
 
 # Super+Q to close the focused view
 riverctl map normal Super+Shift Q close
