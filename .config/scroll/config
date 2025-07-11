@@ -16,7 +16,7 @@ set $home u
 set $end i
 
 # Your preferred terminal emulator
-set $term wezterm
+set $term kitty
 
 # Your perferred file manager
 set $filemanager thunar
