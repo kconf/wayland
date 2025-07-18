@@ -5,7 +5,9 @@
   "modules-left": ["niri/workspaces"],
   "modules-center": ["niri/window"],
   "modules-right": ["network", "pulseaudio", "clock", "tray"],
-  "niri/window": {},
+  "niri/window": {
+    "swap-icon-label": true,
+  },
   "niri/workspaces": {
     "format": "{icon}",
     "format-icons": {

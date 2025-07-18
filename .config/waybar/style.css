@@ -1,113 +1,149 @@
+/* vim:foldmethod=marker */
+@define-color bar-bg #11111b;
+
+@define-color item-bg lighter(@bar-bg);
+
+@define-color ws-bg @item-bg;
+@define-color ws-fg #cdd6f4;
+@define-color ws-active #89b4fa;
+@define-color ws-urgent #f38ba8;
+
+@define-color mode-bg @item-bg;
+@define-color mode-fg #fe8019;
+
+@define-color layout-bg @item-bg;
+@define-color layout-fg #94e2d5;
+@define-color layout-focused #cba6f7;
+
+@define-color window-bg @item-bg;
+@define-color window-fg #cdd6f4;
+
+@define-color widget-bg @item-bg;
+
+@define-color tooltip-bg @item-bg;
+@define-color tooltip-border #89b4fa;
+
+@define-color clock-fg #74c7ec;
+
+@define-color pulseaudio-fg #b4befe;
+@define-color pulseaudio-muted #a6adc8;
+
+@define-color network-wifi #a6e3a1;
+@define-color network-disconnected #f38ba8;
+
+/* global: {{{ */
 * {
   min-height: 0;
   min-width: 0;
   font-family: "JetBrainsMono NFP";
   font-size: 16px;
-  font-weight: 600;
 }
 
 window#waybar {
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  background-color: #11111b;
+  background-color: @bar-bg;
 }
 
+/* items on bar */
 #workspaces button,
-#tags button {
+#tags button,      /* river */
+#mode,
+#clock,            /* widgets */
+#pulseaudio,
+#window,
+#network,
+#tray {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+}
+
+tooltip {
+  background-color: @tooltip-bg;
+  border: 2px solid @tooltip-border;
+}
+/* }}} */
+
+/* workspaces/tags: {{{ */
+
+#workspaces button,
+#tags button {
+  color: @ws-fg;
+  background-color: @ws-bg;
 }
 
 #workspaces button:hover,
 #tags button:hover {
-  color: #1e1e2e;
-  background-color: #cdd6f4;
+  color: @ws-bg;
+  background-color: @ws-fg;
 }
 
 #workspaces button.active,
 #workspaces button.focused,
 #tags button.focused {
-  background-color: #1e1e2e;
-  color: #89b4fa;
+  background-color: @ws-bg;
+  color: @ws-active;
 }
 
 #workspaces button.urgent,
 #tags button.urgent {
-  background-color: #1e1e2e;
-  color: #f38ba8;
+  background-color: @ws-bg;
+  color: @ws-urgent;
 }
 
-#mode,
-#clock,
-#pulseaudio,
-#cpu,
-#tray,
-#memory,
-#window,
-#network {
-  padding: 0.3rem 0.6rem;
-  margin: 0.4rem 0.25rem;
-  border-radius: 6px;
-  /* background-color: #181825; */
-  background-color: #1e1e2e;
+#mode {
+  color: @mode-fg;
 }
 
+#layout {
+  color: @layout-fg;
+}
+
+#layout.focused {
+  color: @layout-focused;
+}
+
+/* }}} */
+
+/* window: {{{ */
+
+/* make window module transparent when no windows present */
 window#waybar.empty #window {
   background-color: transparent;
 }
 
-#mode {
-  color: #fe8019;
+#window {
+  color: @window-fg;
+  background-color: @window-bg;
 }
 
-#layout {
-  color: #94e2d5;
-}
+/* }}} */
 
-#layout.focused {
-  color: #cba6f7;
-}
-
-#cpu {
-  color: #94e2d5;
-}
-
-#memory {
-  color: #cba6f7;
+/* widgets: {{{ */
+#clock,
+#pulseaudio,
+#network,
+#tray {
+  background-color: @widget-bg;
 }
 
 #clock {
-  color: #74c7ec;
-}
-
-#clock.simpleclock {
-  color: #89b4fa;
-}
-
-#window {
-  color: #cdd6f4;
+  color: @clock-fg;
 }
 
 #pulseaudio {
-  color: #b4befe;
+  color: @pulseaudio-fg;
 }
 
 #pulseaudio.muted {
-  color: #a6adc8;
+  color: @pulseaudio-muted;
 }
 
 #network.wifi {
-  color: #a6e3a1;
+  color: @network-wifi;
 }
 
 #network.disconnected {
-  color: #f38ba8;
+  color: @network-disconnected;
 }
+/* }}} */
 
-tooltip {
-  background-color: #181825;
-  border: 2px solid #89b4fa;
-}
