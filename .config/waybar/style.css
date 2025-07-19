@@ -1,35 +1,38 @@
-/* vim:foldmethod=marker */
-@define-color bar-bg #11111b;
+/* vim: set foldmethod=marker: */
+@import url("../../.cache/hellwal/waybar-colors.css");
+/* @import url("colors.css"); */
 
-@define-color item-bg lighter(@bar-bg);
+@define-color bar-bg @background;
+
+@define-color item-bg @color8;
 
 @define-color ws-bg @item-bg;
-@define-color ws-fg #cdd6f4;
-@define-color ws-active #89b4fa;
-@define-color ws-urgent #f38ba8;
+@define-color ws-fg @foreground;
+@define-color ws-active @color4;
+@define-color ws-urgent @color1;
 
 @define-color mode-bg @item-bg;
-@define-color mode-fg #fe8019;
+@define-color mode-fg @color3;
 
 @define-color layout-bg @item-bg;
-@define-color layout-fg #94e2d5;
-@define-color layout-focused #cba6f7;
+@define-color layout-fg @color2;
+@define-color layout-focused @color5;
 
 @define-color window-bg @item-bg;
-@define-color window-fg #cdd6f4;
+@define-color window-fg @color7;
 
 @define-color widget-bg @item-bg;
 
 @define-color tooltip-bg @item-bg;
-@define-color tooltip-border #89b4fa;
+@define-color tooltip-border @color4;
 
-@define-color clock-fg #74c7ec;
+@define-color clock-fg @color10;
 
-@define-color pulseaudio-fg #b4befe;
-@define-color pulseaudio-muted #a6adc8;
+@define-color pulseaudio-fg @color11;
+@define-color pulseaudio-muted @color1;
 
-@define-color network-wifi #a6e3a1;
-@define-color network-disconnected #f38ba8;
+@define-color network-wifi @color12;
+@define-color network-disconnected @color1;
 
 /* global: {{{ */
 * {
@@ -41,6 +44,7 @@
 
 window#waybar {
   background-color: @bar-bg;
+  /* background: none; */
 }
 
 /* items on bar */
