@@ -11,6 +11,7 @@
   "river/tags": {},
   "river/window": {
     "format": "{}",
+    "max-length": 50,
   },
   "river/layout": {
     "format": "{}",
