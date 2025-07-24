@@ -1,38 +1,5 @@
 /* vim: set foldmethod=marker: */
-@import url("../../.cache/hellwal/waybar-colors.css");
-/* @import url("colors.css"); */
-
-@define-color bar-bg @background;
-
-@define-color item-bg @color8;
-
-@define-color ws-bg @item-bg;
-@define-color ws-fg @foreground;
-@define-color ws-active @color4;
-@define-color ws-urgent @color1;
-
-@define-color mode-bg @item-bg;
-@define-color mode-fg @color3;
-
-@define-color layout-bg @item-bg;
-@define-color layout-fg @color2;
-@define-color layout-focused @color5;
-
-@define-color window-bg @item-bg;
-@define-color window-fg @color7;
-
-@define-color widget-bg @item-bg;
-
-@define-color tooltip-bg @item-bg;
-@define-color tooltip-border @color4;
-
-@define-color clock-fg @color10;
-
-@define-color pulseaudio-fg @color11;
-@define-color pulseaudio-muted @color1;
-
-@define-color network-wifi @color12;
-@define-color network-disconnected @color1;
+@import url("colors.css");
 
 /* global: {{{ */
 * {
