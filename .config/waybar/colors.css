@@ -1,22 +1,42 @@
-@define-color background #11111b;
-@define-color foreground #ffffff;
-@define-color cursor #ffffff;
-@define-color border #ffffff;
+/* 主背景色 */
+@define-color bar-bg #282828;
 
-@define-color color0 #11111b;
-@define-color color1 #f38ba8;
-@define-color color2 #94e2d5;
-@define-color color3 #fe8019;
-@define-color color4 #89b4fa;
-@define-color color5 #ffadd2;
-@define-color color6 #abe1ff;
-@define-color color7 #cdd6f4;
-@define-color color8 #1e1e2e;
-@define-color color9 #f38ba8;
-@define-color color10 #94e2d5;
-@define-color color11 #fe8019;
-@define-color color12 #89b4fa;
-@define-color color13 #ffadd2;
-@define-color color14 #abe1ff;
-@define-color color15 #ffffff;
+/* 所有模块的默认背景色，使用亮黑色/深灰色，提供层次感 */
+@define-color item-bg #3E3E3E;
 
+/* 工作区 (Workspaces) */
+@define-color ws-bg @item-bg;
+@define-color ws-fg #EBDBB2;
+@define-color ws-active #458588; /* 蓝色，用于高亮当前活动的工作区 */
+@define-color ws-urgent #CC241D; /* 红色，用于提示紧急状态 */
+
+/* 模式 (Mode) */
+@define-color mode-bg @item-bg;
+@define-color mode-fg #D79921; /* 黄色，用于提示特殊模式 (如 i3 的 resize 模式) */
+
+/* 布局 (Layout) */
+@define-color layout-bg @item-bg;
+@define-color layout-fg #98971A; /* 绿色 */
+@define-color layout-focused #B16286; /* 紫色，用于高亮 */
+
+/* 窗口标题 (Window Title) */
+@define-color window-bg @item-bg;
+@define-color window-fg #EBDBB2;
+
+/* 通用控件背景 (Widgets) */
+@define-color widget-bg @item-bg;
+
+/* 悬浮提示 (Tooltip) */
+@define-color tooltip-bg @item-bg;
+@define-color tooltip-border @color4; /* 蓝色边框 */
+
+/* 时钟 (Clock) */
+@define-color clock-fg #689D6A; /* 青色 */
+
+/* 音量 (Pulseaudio) */
+@define-color pulseaudio-fg #B16286; /* 紫色 */
+@define-color pulseaudio-muted #CC241D; /* 红色，表示静音 */
+
+/* 网络 (Network) */
+@define-color network-wifi #83A598; /* 亮蓝色 */
+@define-color network-disconnected #CC241D; /* 红色，表示断开连接 */
