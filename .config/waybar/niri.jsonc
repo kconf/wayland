@@ -7,6 +7,8 @@
   "modules-right": ["network", "pulseaudio", "clock", "tray"],
   "niri/window": {
     "swap-icon-label": true,
+    "icon": true,
+    "icon-size": 16,
   },
   "niri/workspaces": {
     "format": "{icon}",
