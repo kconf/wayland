@@ -265,7 +265,11 @@ layout {
 spawn-at-startup "dunst"
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar" "-c" "/home/hjw/.config/waybar/niri.jsonc"
+// spawn-at-startup "waybar" "-c" "/home/hjw/.config/waybar/niri.jsonc"
+
+// Use DankMaterialShell
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+spawn-at-startup "qs" "-c" "DankMaterialShell"
 
 spawn-at-startup "fcitx5" "--replace" "-d"
 
