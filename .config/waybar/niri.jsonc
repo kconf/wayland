@@ -6,7 +6,6 @@
   "modules-center": ["niri/window"],
   "modules-right": ["network", "pulseaudio", "clock", "tray"],
   "niri/window": {
-    "swap-icon-label": true,
     "icon": true,
     "icon-size": 16,
   },
@@ -21,6 +20,7 @@
       "document": "󰈭",
 
       // Icons by state
+      "urgent": "󰒐",
       "active": "",
       "default": "",
     },
