@@ -27,10 +27,13 @@ set $menu rofi -dpi -1 -show
 #: }}}
 
 #: XWayland {{{
-xwayland disable
-exec xwayland-satellite
-exec sh -c 'sleep 1 && env DISPLAY=:0 xrdb -merge ~/.Xresources'
+# xwayland disable
+# exec xwayland-satellite
+# exec sh -c 'sleep 1 && env DISPLAY=:0 xrdb -merge ~/.Xresources'
 #: }}}
+
+# If your monitor HiDPI scale is for example 2.0, to undo it, choose scale  (1.0 / 2.0) -> 0.5
+for_window [shell="xwayland"] scale_content exact 0.5
 
 #: Basic operations {{{
 
