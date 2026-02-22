@@ -479,7 +479,7 @@ bindsym $mod+Shift+e exec scrollnag -t warning -m 'You pressed the exit shortcut
 
 #: System {{{
 
-  # Special keys to adjust volume via PulseAudio
+  # Special keys to adjust volume via dms
   bindsym XF86AudioRaiseVolume exec dms ipc call audio increment 3
   bindsym XF86AudioLowerVolume exec dms ipc call audio decrement 3
   bindsym XF86AudioMute exec dms ipc call audio mute
@@ -495,7 +495,8 @@ bindsym $mod+Shift+e exec scrollnag -t warning -m 'You pressed the exit shortcut
   bindsym XF86MonBrightnessDown exec dms ipc call brightness decrement 5
 
   # Special key to take a screenshot with grim
-  bindsym $mod+p exec grim
+  bindsym $mod+p exec dms screenshot -d ~/Pictures/Screenshots
+  bindsym $mod+Alt+p exec dms screenshot full -d ~/Pictures/Screenshots
 
 #: }}}
 
