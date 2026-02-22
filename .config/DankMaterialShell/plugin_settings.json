@@ -1,0 +1,9 @@
+{
+  "dankPomodoroTimer": {
+    "enabled": true
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  }
+}
