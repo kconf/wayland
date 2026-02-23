@@ -2,7 +2,10 @@
   "currentThemeName": "custom",
   "currentThemeCategory": "registry",
   "customThemeFile": "/home/hjw/.config/DankMaterialShell/themes/synthwaveElectric/theme.json",
-  "registryThemeVariants": {},
+  "registryThemeVariants": {
+    "petrichor": "green",
+    "gruvboxMaterial": "medium"
+  },
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
@@ -191,7 +194,13 @@
   "appLauncherViewMode": "grid",
   "spotlightModalViewMode": "list",
   "browserPickerViewMode": "grid",
-  "browserUsageHistory": {},
+  "browserUsageHistory": {
+    "microsoft-edge": {
+      "count": 1,
+      "lastUsed": 1771755352183,
+      "name": "Microsoft Edge"
+    }
+  },
   "appPickerViewMode": "grid",
   "filePickerUsageHistory": {},
   "sortAppsAlphabetically": false,
