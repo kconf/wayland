@@ -5,5 +5,13 @@
   "calculator": {
     "enabled": true,
     "trigger": "="
+  },
+  "voxtype": {
+    "enabled": true,
+    "refreshInterval": 1
+  },
+  "dankKDEConnect": {
+    "enabled": true,
+    "selectedDeviceId": "d797399245b74857a65327dc10044997"
   }
 }

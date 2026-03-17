@@ -1,10 +1,16 @@
 {
   "currentThemeName": "custom",
   "currentThemeCategory": "registry",
-  "customThemeFile": "/home/hjw/.config/DankMaterialShell/themes/synthwaveElectric/theme.json",
+  "customThemeFile": "/home/hjw/.config/DankMaterialShell/themes/catppuccin/theme.json",
   "registryThemeVariants": {
-    "petrichor": "green",
-    "gruvboxMaterial": "medium"
+    "petrichor": "pink",
+    "gruvboxMaterial": "hard",
+    "catppuccin": {
+      "dark": {
+        "flavor": "mocha",
+        "accent": "mauve"
+      }
+    }
   },
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": true,
@@ -202,7 +208,23 @@
     }
   },
   "appPickerViewMode": "grid",
-  "filePickerUsageHistory": {},
+  "filePickerUsageHistory": {
+    "sioyek": {
+      "count": 1,
+      "lastUsed": 1772508970894,
+      "name": "Sioyek"
+    },
+    "org.pwmt.zathura": {
+      "count": 1,
+      "lastUsed": 1772508991532,
+      "name": "Zathura"
+    },
+    "org.kde.okular": {
+      "count": 2,
+      "lastUsed": 1773112235582,
+      "name": "Okular"
+    }
+  },
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 4,
   "spotlightCloseNiriOverview": true,
@@ -218,7 +240,7 @@
   "dankLauncherV2ShowFooter": true,
   "dankLauncherV2UnloadOnClose": false,
   "useAutoLocation": true,
-  "weatherEnabled": true,
+  "weatherEnabled": false,
   "networkPreference": "wifi",
   "iconTheme": "Adwaita",
   "cursorSettings": {
@@ -450,6 +472,10 @@
         }
       ],
       "rightWidgets": [
+        {
+          "id": "dankKDEConnect",
+          "enabled": true
+        },
         {
           "id": "controlCenterButton",
           "enabled": true
