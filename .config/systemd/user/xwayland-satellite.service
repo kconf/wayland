@@ -1,0 +1,27 @@
+[Unit]
+Description=Xwayland Satellite with Custom DPI (2x Scale)
+After=niri.service
+
+[Service]
+# 1. 启动 Xwayland 适配器
+ExecStart=/usr/bin/xwayland-satellite :0
+
+# 2. 设置环境变量 (针对 GTK/Qt 等现代 X11 程序)
+# GDK_SCALE=2 会让 GTK3 程序整体放大 2 倍
+# QT_SCALE_FACTOR=2 会让 Qt 程序整体放大 2 倍
+# XCURSOR_SIZE=48 确保光标在 2 倍缩放下的尺寸正常 (通常 96dpi 用 24)
+Environment=DISPLAY=:0
+Environment=GDK_SCALE=2
+Environment=QT_SCALE_FACTOR=2
+Environment=XCURSOR_SIZE=48
+
+# 3. 启动后注入 X11 核心 DPI 设置 (针对老旧程序或字体渲染)
+# 使用 echo 配合 xrdb -merge，无需读取外部 .Xresources 文件
+ExecStartPost=/bin/sh -c "sleep 0.5 && echo 'Xft.dpi: 192' | xrdb -display :0 -merge"
+
+# 4. 守护进程设置
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target

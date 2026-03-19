@@ -74,14 +74,8 @@ layer-rule {
 // Use Dank: https://danklinux.com/
 spawn-at-startup "dms" "run"
 
-// Clipboard history
-spawn-sh-at-startup "wl-paste --watch cliphist store &"
-
 // Input method
 spawn-at-startup "fcitx5" "--replace" "-d"
-
-// Setup scale for xwindows.
-spawn-sh-at-startup "xrdb -merge ~/.Xresources"
 
 environment {
     DISPLAY ":0"
