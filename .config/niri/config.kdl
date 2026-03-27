@@ -145,8 +145,7 @@ binds {
     // Move the focused window between the floating and the tiling layout.
     Mod+Space       { toggle-window-floating; }
     Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
-    Mod+Alt+Space { spawn "speak-to-ai" "toggle"; }
-    // Mod+Alt+Space { spawn "voxtype" "record" "toggle"; }
+    Mod+Alt+Space { spawn "voxtype" "record" "toggle"; }
 
     Mod+P { screenshot; }
     Alt+P { screenshot-window; }
