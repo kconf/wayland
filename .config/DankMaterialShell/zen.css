@@ -1,39 +1,39 @@
 /* DMS Matugen Zen Browser Theme */
 :root {
-  --zen-primary-color: #55307f !important;
-  --toolbarbutton-icon-fill: #cba6f7 !important;
-  --toolbar-field-color: #cdd6f4 !important;
-  --tab-selected-textcolor: #cba6f7 !important;
-  --toolbar-color: #cdd6f4 !important;
-  --arrowpanel-color: #cdd6f4 !important;
-  --arrowpanel-background: #1e1e2e !important;
-  --sidebar-text-color: #cdd6f4 !important;
-  --zen-main-browser-background: #1e1e2e !important;
+  --zen-primary-color: #cc5200 !important;
+  --toolbarbutton-icon-fill: #ff6600 !important;
+  --toolbar-field-color: #f0f8ff !important;
+  --tab-selected-textcolor: #ff6600 !important;
+  --toolbar-color: #f0f8ff !important;
+  --arrowpanel-color: #e6f0ff !important;
+  --arrowpanel-background: #0a0a15 !important;
+  --sidebar-text-color: #f0f8ff !important;
+  --zen-main-browser-background: #0a0a15 !important;
 }
 
 .sidebar-placesTree {
-  background-color: #1e1e2e !important;
+  background-color: #0a0a15 !important;
 }
 
 #zen-workspaces-button {
-  background-color: #1e1e2e !important;
+  background-color: #0a0a15 !important;
 }
 
 #TabsToolbar {
-  background-color: #1e1e2e !important;
+  background-color: #0a0a15 !important;
 }
 
 .urlbar-background {
-  background-color: #1e1e2e !important;
+  background-color: #0a0a15 !important;
 }
 
 .urlbar-input::selection {
-  color: #1e1e2e !important;
-  background-color: #cba6f7 !important;
+  color: #000000 !important;
+  background-color: #ff6600 !important;
 }
 
 .urlbarView-url {
-  color: #a6adc8 !important;
+  color: #cce0ff !important;
 }
 
 toolbar .toolbarbutton-1 {
@@ -44,51 +44,69 @@ toolbar .toolbarbutton-1 {
         .toolbarbutton-text,
         .toolbarbutton-badge-stack
       ) {
-      fill: #cba6f7
+      fill: #ff6600
     }
   }
 }
 
 .identity-color-blue {
-  --identity-tab-color: #d8b7ff !important;
-  --identity-icon-color: #d8b7ff !important;
+  --identity-tab-color: #ff7c26 !important;
+  --identity-icon-color: #ff7c26 !important;
 }
 
 .identity-color-turquoise {
-  --identity-tab-color: #cba6f7 !important;
-  --identity-icon-color: #cba6f7 !important;
+  --identity-tab-color: #FF6600 !important;
+  --identity-icon-color: #FF6600 !important;
 }
 
 .identity-color-green {
-  --identity-tab-color: #a5ffba !important;
-  --identity-icon-color: #a5ffba !important;
+  --identity-tab-color: #6cff4c !important;
+  --identity-icon-color: #6cff4c !important;
 }
 
 .identity-color-yellow {
-  --identity-tab-color: #ffe8a5 !important;
-  --identity-icon-color: #ffe8a5 !important;
+  --identity-tab-color: #ffdf4c !important;
+  --identity-icon-color: #ffdf4c !important;
 }
 
 .identity-color-orange {
-  --identity-tab-color: #ffdb72 !important;
-  --identity-icon-color: #ffdb72 !important;
+  --identity-tab-color: #ffd100 !important;
+  --identity-icon-color: #ffd100 !important;
 }
 
 .identity-color-red {
-  --identity-tab-color: #ff9fb1 !important;
-  --identity-icon-color: #ff9fb1 !important;
+  --identity-tab-color: #ff483f !important;
+  --identity-icon-color: #ff483f !important;
 }
 
 .identity-color-pink {
-  --identity-tab-color: #dfc4ff !important;
-  --identity-icon-color: #dfc4ff !important;
+  --identity-tab-color: #ff934c !important;
+  --identity-icon-color: #ff934c !important;
 }
 
 .identity-color-purple {
-  --identity-tab-color: #4c2d72 !important;
-  --identity-icon-color: #4c2d72 !important;
+  --identity-tab-color: #762f00 !important;
+  --identity-icon-color: #762f00 !important;
 }
 
 #zen-appcontent-navbar-container {
-  background-color: #1e1e2e !important;
+  background-color: #0a0a15 !important;
+}
+
+#PanelUI-menu-button .toolbarbutton-icon,
+#downloads-button .toolbarbutton-icon,
+#unified-extensions-button .toolbarbutton-icon {
+  fill: #ff6600 !important;
+  color: #ff6600 !important;
+}
+
+#PanelUI-menu-button .toolbarbutton-badge-stack,
+#downloads-button .toolbarbutton-badge-stack,
+#unified-extensions-button .toolbarbutton-badge-stack {
+  fill: #ff6600 !important;
+  color: #ff6600 !important;
+}
+
+toolbar .toolbarbutton-1 > .toolbarbutton-icon {
+  fill: #ff6600 !important;
 }

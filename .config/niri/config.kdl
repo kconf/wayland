@@ -74,9 +74,6 @@ layer-rule {
 // Use Dank: https://danklinux.com/
 spawn-at-startup "dms" "run"
 
-// Input method
-// spawn-at-startup "fcitx5" "--replace" "-d"
-
 environment {
     DISPLAY ":0"
     XDG_CURRENT_DESKTOP "niri"

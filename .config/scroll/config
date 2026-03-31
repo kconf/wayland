@@ -505,7 +505,5 @@ exec dms run
 
 # Clipboard history
 exec wl-paste --watch cliphist store
-
-exec fcitx5 --replace -d
 #: }}}
 
