@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+wms=("niri" "hyprland" "sway" "river" "scroll")
+chosen=$(printf "%s\n" "${wms[@]}" | fzf --prompt="󰣇 Select Session: " --height 40% --reverse)
+
+[[ -z "$chosen" ]] && { echo "No selection. Bye!"; exit 0; }
+
+case "$chosen" in
+  hyprland)
+    # 官方最推荐：使用 uwsm 启动对应的 .desktop 单元
+    if command -v uwsm > /dev/null; then
+      exec uwsm start hyprland-uwsm.desktop
+    else
+      # 退而求其次：使用自带的包装脚本
+      exec start-hyprland
+    fi
+    ;;
+
+  niri)
+    # niri 也有很棒的 session 支持
+    exec niri-session
+    ;;
+
+  *)
+    # 其他 WM 如果支持 uwsm，也可以这样写：
+    if command -v uwsm > /dev/null; then
+      exec uwsm start "$chosen.desktop"
+    else
+      # 实在不行再用你之前的 dbus-run-session
+      exec dbus-run-session "$chosen"
+    fi
+    ;;
+esac

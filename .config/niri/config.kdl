@@ -75,7 +75,7 @@ layer-rule {
 spawn-at-startup "dms" "run"
 
 // Input method
-spawn-at-startup "fcitx5" "--replace" "-d"
+// spawn-at-startup "fcitx5" "--replace" "-d"
 
 environment {
     DISPLAY ":0"
