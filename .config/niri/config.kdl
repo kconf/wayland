@@ -140,8 +140,6 @@ binds {
     Mod+Shift+Q repeat=false { close-window; }
 
     // Move the focused window between the floating and the tiling layout.
-    Mod+Space       { toggle-window-floating; }
-    Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
     Mod+Alt+Space { spawn "voxtype" "record" "toggle"; }
 
     Mod+P { screenshot; }
