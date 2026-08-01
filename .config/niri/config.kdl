@@ -311,5 +311,5 @@ binds {
     Mod+Alt+Space { spawn "voxtype" "record" "toggle"; }
 
     Mod+P { screenshot; }
-    Alt+P { screenshot-window; }
+    Mod+Alt+P { screenshot-window; }
 }
