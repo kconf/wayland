@@ -2,6 +2,10 @@
 # Wayland utilities
 "pacman:wl-clipboard" = "latest"
 "pacman:dunst" = "latest"
+"pacman:uwsm" = "latest"
+
+# Desktop shell
+"pacman:dms-shell" = "latest"
 
 # Window managers and their dependencies
 "pacman:hyprland" = "latest"
@@ -10,7 +14,7 @@
 "pacman:xwayland-satellite" = "latest"
 
 [tasks.bootstrap]
-description = "Install the stable sway-scroll AUR package"
+description = "Install sway-scroll and enable DMS for graphical sessions"
 run = '''
 #!/usr/bin/env bash
 set -euo pipefail
@@ -25,4 +29,10 @@ command -v paru >/dev/null || {
 }
 
 paru --sync --needed "${aur_packages[@]}"
+
+systemctl --user enable dms.service
+
+if systemctl --user is-active --quiet graphical-session.target; then
+  systemctl --user start dms.service
+fi
 '''
