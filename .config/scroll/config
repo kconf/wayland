@@ -424,7 +424,6 @@ default_border pixel 2
 gaps inner 4
 gaps outer 20
 
-include ~/.config/scroll/colors.conf
 #: }}}
 
 #: Bar settings {{{

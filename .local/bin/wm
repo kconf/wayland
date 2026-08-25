@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-wms=("niri" "hyprland" "sway" "river" "scroll")
+wms=("niri" "hyprland" "scroll")
 chosen=$(printf "%s\n" "${wms[@]}" | fzf --prompt="󰣇 Select Session: " --height 40% --reverse)
 
 [[ -z "$chosen" ]] && { echo "No selection. Bye!"; exit 0; }

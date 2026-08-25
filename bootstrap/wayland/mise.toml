@@ -1,0 +1,28 @@
+[bootstrap.packages]
+# Wayland utilities
+"pacman:wl-clipboard" = "latest"
+"pacman:dunst" = "latest"
+
+# Window managers and their dependencies
+"pacman:hyprland" = "latest"
+"pacman:niri" = "latest"
+"pacman:xdg-desktop-portal-gnome" = "latest"
+"pacman:xwayland-satellite" = "latest"
+
+[tasks.bootstrap]
+description = "Install the stable sway-scroll AUR package"
+run = '''
+#!/usr/bin/env bash
+set -euo pipefail
+
+aur_packages=(
+  sway-scroll
+)
+
+command -v paru >/dev/null || {
+  echo "error: paru is required to install AUR packages" >&2
+  exit 1
+}
+
+paru --sync --needed "${aur_packages[@]}"
+'''
