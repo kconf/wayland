@@ -3,6 +3,7 @@
 "pacman:wl-clipboard" = "latest"
 "pacman:dunst" = "latest"
 "pacman:uwsm" = "latest"
+"pacman:qt5-wayland" = "latest"
 
 # Desktop shell
 "pacman:dms-shell" = "latest"
