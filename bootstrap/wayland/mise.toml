@@ -20,17 +20,6 @@ run = '''
 #!/usr/bin/env bash
 set -euo pipefail
 
-aur_packages=(
-  sway-scroll
-)
-
-command -v paru >/dev/null || {
-  echo "error: paru is required to install AUR packages" >&2
-  exit 1
-}
-
-paru --sync --needed "${aur_packages[@]}"
-
 systemctl --user enable dms.service
 
 if systemctl --user is-active --quiet graphical-session.target; then
